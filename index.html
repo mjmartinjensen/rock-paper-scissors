@@ -15,4 +15,48 @@
         }
     }
     console.log(getComputerChoice());
+
+    //create a function gameResult that takes two parameters playerSelection and computerSelection
+    function gameResult(playerSelection, computerSelection) {
+    //convert playerSelection to case-insensitive
+    playerSelection = playerSelection.slice(0,1).toUpperCase() + playerSelection.slice(1).toLowerCase();
+        //if playerSelection and computerSelection is equal then return a string "You Draw! Both picked Rock"
+        if (playerSelection === "Rock" && computerSelection === "Rock") {
+            return "You Draw! Both picked Rock";
+        }
+        //if playerSelection is "Rock" and computerSelection is "Paper" then return a string "You Lose! Paper beats Rock"
+        else if (playerSelection === "Rock" && computerSelection === "Paper") {
+            return "You Lose! Paper beats Rock";
+        }
+        //if playerSelection is "Rock" and computerSelection is "Scissors" then return a string "You Win! Rock beats Scissors"
+        else if (playerSelection === "Rock" && computerSelection === "Scissors") {
+            return "You Win! Rock beats Scissors";
+        }
+        //if playerSelection and computerSelection is equal then return a string "You Draw! Both picked Rock"
+        if (playerSelection === "Paper" && computerSelection === "Paper") {
+            return "You Draw! Both picked Paper";
+        }
+        //if playerSelection is "Paper" and computerSelection is "Rock" then return a string "You Win! Paper beats Rock"
+        else if (playerSelection === "Paper" && computerSelection === "Rock") {
+            return "You Win! Paper beats Rock";
+        }
+        //if playerSelection is "Paper" and computerSelection is "Scissor" then return a string "You Lose! Scissors beat Paper"
+        else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+            return "You Lose! Scissors beat Paper";
+        }
+        //if playerSelection and computerSelection is equal then return a string "You Draw! Both picked Scissors"
+        if (playerSelection === "Scissors" && computerSelection === "Scissors") {
+            return "You Draw! Both picked Scissors";
+        }
+        //if playerSelection is "Scissors" and computerSelection is "Rock" then return a string "You Lose! Rock beats Scissors"
+        else if (playerSelection === "Scissors" && computerSelection === "Rock") {
+            return "You Lose! Rock beats Scissors";
+        }
+        //if playerSelection is "Scissors" and computerSelection is "Paper" then return a string "You Win! Scissors beat Paper"
+        else if (playerSelection === "Scissors" && computerSelection === "Paper") {
+            return "You Win! Scissors beat Paper";
+        }
+    }
+
+    console.log(gameResult("rock", "Rock"));
 </script>
