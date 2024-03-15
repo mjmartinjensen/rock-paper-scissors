@@ -1,3 +1,18 @@
 <script>
-    console.log("Hello World");
+    //create a function getComputerChoice()
+    //create a randomNumber between 0 (incl) and 1 (excl)
+    //if randomNumber is less than 1/3 return "Rock"
+    //if randomNumber is 1/3 to less than 2/3 return "Paper"
+    //if randomNumber is 2/3 to less than 3/3 return "Scissor"
+    function getComputerChoice() {
+    let randomNumber = Math.random();
+        if (randomNumber < 1/3) {
+            return "Rock";
+        } else if (randomNumber < 2/3) {
+            return "Paper";
+        } else {
+            return "Scissor";
+        }
+    }
+    console.log(getComputerChoice());
 </script>
